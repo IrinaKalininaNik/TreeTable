@@ -12,6 +12,12 @@ class BinaryTree
 	NodeTree<KEY, DATA>* insert(NodeTree<KEY, DATA>* node, KEY elem, DATA val);
 	NodeTree<KEY, DATA>* remove(NodeTree<KEY, DATA>* node, KEY elem);
 	void showNode(NodeTree<KEY, DATA>* node);
+	DATA max(NodeTree<KEY,DATA>* s)
+	{
+		if(s->right==0)
+		{ return s->valdata;}
+		return	max(s->right);
+	}
 
 
 	NodeTree<KEY, DATA>* findmin(NodeTree<KEY, DATA>* p)
@@ -86,6 +92,10 @@ public:
 	void add(KEY elem,DATA val);
 	void remove(KEY elem);
 	void show();
+	DATA max()
+	{
+		return max(root);
+	}
 
 	unsigned char height()
 	{

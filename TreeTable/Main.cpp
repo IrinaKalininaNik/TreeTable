@@ -21,8 +21,7 @@ void main()
 	binary.remove(5);
 	binary.remove(9);
 	binary.remove(300);
-
-
+	std::cout<<binary.max();
 	std::cin.get();
 
 	return;
